@@ -8,7 +8,7 @@ pipeline {
     parameters {
         string(name: 'BRANCH_NAME', defaultValue: 'main')
         string(name: 'BUILD_ENV', defaultValue: 'dev')
-        string(name: 'STUDENT_NAME', defaultValue: 'Hassan Qureshi') // ✅ put your name here
+        string(name: 'STUDENT_NAME', defaultValue: 'Hassan Qureshi') 
     }
 
     environment {
@@ -49,7 +49,7 @@ pipeline {
     post {
         always {
             echo 'Cleaning up workspace...'
-            // deleteDir() // uncomment if you want Jenkins to clear workspace after each run
+            
         }
         success {
             echo 'Pipeline executed successfully.'
